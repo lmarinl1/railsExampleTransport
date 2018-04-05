@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category: MyString
+  plate: MyString
+  score: false
+  comment: MyText
+
+two:
+  category: MyString
+  plate: MyString
+  score: false
+  comment: MyText

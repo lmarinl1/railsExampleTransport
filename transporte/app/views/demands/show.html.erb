@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @demand.category %>
+</p>
+
+<p>
+  <strong>Plate:</strong>
+  <%= @demand.plate %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @demand.score %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @demand.comment %>
+</p>
+
+<%= link_to 'Edit', edit_demand_path(@demand) %> |
+<%= link_to 'Back', demands_path %>

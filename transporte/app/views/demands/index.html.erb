@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Demands</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Plate</th>
+      <th>Score</th>
+      <th>Comment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @demands.each do |demand| %>
+      <tr>
+        <td><%= demand.category %></td>
+        <td><%= demand.plate %></td>
+        <td><%= demand.score %></td>
+        <td><%= demand.comment %></td>
+        <td><%= link_to 'Show', demand %></td>
+        <td><%= link_to 'Edit', edit_demand_path(demand) %></td>
+        <td><%= link_to 'Destroy', demand, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Demand', new_demand_path %>

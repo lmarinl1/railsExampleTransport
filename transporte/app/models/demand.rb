@@ -1,0 +1,3 @@
+class Demand < ApplicationRecord
+
+end

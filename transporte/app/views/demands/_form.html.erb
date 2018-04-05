@@ -1,0 +1,38 @@
+<%= form_with(model: demand, local: true) do |form| %>
+  <% if demand.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(demand.errors.count, "error") %> prohibited this demand from being saved:</h2>
+
+      <ul>
+      <% demand.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.radio_button :category, "taxi" %> Taxi
+    <%= form.radio_button :category, "bus" %> Bus
+  </div>
+
+  <div class="field">
+    <%= form.label :plate %>
+    <%= form.text_field :plate, id: :demand_plate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :score %>
+    <%= form.check_box :score, id: :demand_score %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment %>
+    <%= form.text_area :comment, id: :demand_comment %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
